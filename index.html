@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team A Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+</head>
+
+<body>
+    <!-- NavBar  -->
+    <!-- <header class="navbar">
+        <h1>Expense Tracker App</h1>
+        <div class="profile">
+            <img src="images/user-profile.jpg" alt="">
+            <span>Siara Kopza</span>
+        </div>
+    </header> -->
+
+    <!-- <div class="form">
+        <h2 class="topbar">Your Current Balance</h2>
+        <label for="balance">Current Balance : <span>R0</span></label>
+    </div> -->
+    <div class="wrapper">
+        <div class="container">
+            <!-- check test design -->
+            <div class="input-container flex-space">
+                <div>
+                    <p>Team-A Expense Tracker </p>
+                </div>
+            </div>
+            <!-- end -->
+            <div class="sub-container">
+                <!-- Budget -->
+                <div class="total-amount-container">
+                    <h3>Current Balance</h3>
+                    <p class="hide error" id="budget-error">
+                        Value cannot be blank
+                    </p>
+                    <input type="number" id="total-amount" placeholder="Enter Total Amount" />
+                    <button class="submit" id="total-amount-button">Set Budget</button>
+                </div>
+
+                <!-- Expenditure -->
+                <div class="user-amount-container">
+                    <h3>Expenses</h3>
+                    <p class="hide error" id="product-title-error">
+                        Values cannot be blank
+                    </p>
+                    <input type="text" class="product-title" id="product-title" placeholder="Enter Title of Product" />
+                    <input type="number" id="user-amount" placeholder="Enter amount" />
+                    <button class="submit" id="check-amount">Expense</button>
+                    <button class="submit" id="check-income">Income</button>
+                </div>
+            </div>
+            <!-- Output -->
+            <div class="output-container flex-space">
+                <div>
+                    <p>Total Budget</p>
+                    <span id="amount">0</span>
+                </div>
+                <div>
+                    <p>Expenses</p>
+                    <span id="expenditure-value">0</span>
+                </div>
+                <div>
+                    <p>Income</p>
+                    <span id="income-value">0</span>
+                </div>
+                <div>
+                    <p>Balance</p>
+                    <span id="balance-amount">0</span>
+                </div>
+            </div>
+        </div>
+        <!-- List -->
+        <div class="list">
+            <h3>Transaction List</h3>
+            <div class="list-container" id="list-transactions"></div>
+        </div>
+    </div>
+
+    <script src="/main.js"></script>
+</body>
+
+</html>
