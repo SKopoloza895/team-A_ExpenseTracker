@@ -123,6 +123,11 @@ ul{
 .expense{
   background-color: #e5415e;
 }
+/* right side */
+.right_side{
+  display: flex;
+  gap: 5px;
+}
 
   .container {
     width: 100%;
