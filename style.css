@@ -136,6 +136,13 @@ ul{
 .right_side button:hover{
   color: skyblue;
 }
+#cancel{
+  background-color: #e5415e;
+  display: none;
+}
+#cancel:hover{
+  background-color: red;
+}
 
   .container {
     width: 100%;
