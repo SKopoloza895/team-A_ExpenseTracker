@@ -112,7 +112,15 @@ function display() {
   keepData();
 }
 
+// Function for Cancel Button
+cancelButton.addEventListener("click", () => {
+  editIndex = -1;    
+  tnxdescriptionNameHolder.value ="";
+  tnxAmountolder.value = "";
+  cancelButton.style.display = "none";
+})
 
+// Function for Save Button
 saveButton.addEventListener("click", () => { // "click" event and on click event 
   if (tnxdescriptionNameHolder.value == "" || (tnxAmountolder.value) <= 0) { // if true with blank then check OR Aamount with 0 
       alert("Can't be blank!");
@@ -163,26 +171,4 @@ checkAmountButton.addEventListener("click", () => {
   userAmount.value = "";
 });
 
-//Function To Add Income
-checkIncomeButton.addEventListener("click", () => {
-  //empty checks
-  if (!userAmount.value || !productTitle.value) {
-    productTitleError.classList.remove("hide");
-    return false;
-  }
-  //Enable buttons
-  disableButtons(false);
-  //Income
-  let incomeAdd = parseInt(userAmount.value);
-  //Total income (existing + new)
-  let sum = parseInt(incomeValue.innerText) + incomeAdd;
-  incomeValue.innerText = sum;
-  //Total balance(budget + total income)
-  const totalBalance = tempAmount + sum;
-  balanceValue.innerText = totalBalance;
-  //Create list
-  listCreator(productTitle.value, userAmount.value);
-  //Empty inputs
-  productTitle.value = "";
-  userAmount.value = "";
-});
+
