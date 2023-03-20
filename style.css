@@ -99,6 +99,14 @@ button{
   background-color: rgb(13, 87, 133);
 }
 
+/* headingList for transaction list */
+p.headingList{
+  margin: 10px 0;
+}
+ul{
+  list-style: none;
+}
+
   .container {
     width: 100%;
   }
