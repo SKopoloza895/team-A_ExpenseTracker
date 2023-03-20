@@ -13,6 +13,21 @@ const cancelButton = document.getElementById("cancel");
 
 const displayList = document.getElementById("list-of-transactions"); // list-of-transactions from html to getElementById
 
+// Function for Edit onclick="edit(${i})" 
+function edit(i) { // i for index
+  cancelButton.style.display = "block"; // from css
+  editIndex = i;
+  tnxdescriptionNameHolder.value =listOfTransactions[i].name;
+  tnxAmountolder.value =listOfTransactions[i].amount;
+
+  if (listOfTransactions[i].type == "income") {
+      income.checked = true;
+  }
+  else{
+      expense.checked =true;
+  }
+  
+}
 
 //Set Balance for budget Part
 totalAmountButton.addEventListener("click", () => {
