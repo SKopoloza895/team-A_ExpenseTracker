@@ -1,3 +1,4 @@
+// Declare and variable with const initialization
 const currencyHolder = document.getElementById("currency") //currency from html to getElementById
 const balanceHolder = document.getElementById("balance") // balance from html to getElementById
 
@@ -58,30 +59,36 @@ const modifyElement = (element, edit = false) => {
   parentDiv.remove();
 };
 
-//Function To Create List
-const listCreator = (expenseName, expenseValue) => {
-  let sublistContent = document.createElement("div");
-  sublistContent.classList.add("sublist-content", "flex-space"); // to create add for list 
-  list.appendChild(sublistContent); // AppendChild use for return to the object
-  sublistContent.innerHTML = `<p class="product">${expenseName}</p><p class="amount">${expenseValue}</p>`;
-  let editButton = document.createElement("button");
-  editButton.classList.add("fa-solid", "fa-pen-to-square", "edit");
-  editButton.style.fontSize = "1.2em";
-  editButton.addEventListener("click", () => { // e.g actual like onclick ="editButton()"
-    modifyElement(editButton, true); // change for add then display
-  });
+// Function for display (render)
+function display() {
+  currentBalance = listOfTransactions.reduce(
+      (total,value) => {return value.type == "expense" ? total - value.amount : total + value.amount},0) //in order array function and take callback with value. return will reach on total plus and value
+  
+  displayList.innerHTML = ""; 
+  
+  if (listOfTransactions.length == 0) {
+      displayList.innerHTML += "No Transaction found"
+  }
+  else{
+      listOfTransactions.forEach((e,i) =>{ // forEach((e,i) from callback the function accept to 3 arguments in array. (e => element and this)
+          displayList.innerHTML += `
+          <li class="transaction ${e.type}"> 
+              <p>${e.name}</p>
+              <div class="right_side">
+                  <p>${symbol}${e.amount}</p>
+                  <button onclick="edit(${i})"><i class="fas fa-edit"></i></button>
+                  <button onclick="deleteBtn(${i})"><i class="fas fa-trash-alt"></i></button>
+              </div>
+          </li>
+          `;
+      })
+  }
 
-  let deleteButton = document.createElement("button");
-  deleteButton.classList.add("fa-solid", "fa-trash-can", "delete");
-  deleteButton.style.fontSize = "1.2em";
-  deleteButton.addEventListener("click", () => {
-    modifyElement(deleteButton); // for delete then empty
-  });
 
-  sublistContent.appendChild(editButton);
-  sublistContent.appendChild(deleteButton);
-  document.getElementById("list").appendChild(sublistContent); // display the list 
-};
+  currencyHolder.innerHTML = symbol;
+  balanceHolder.innerHTML = currentBalance;
+  keepData();
+}
 
 //Function To Add Expenses
 checkAmountButton.addEventListener("click", () => {
