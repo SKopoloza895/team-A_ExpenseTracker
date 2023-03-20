@@ -49,6 +49,19 @@ body{
   font-size: 2rem;
 }
 
+/* FORM */
+.form{
+  background-color: #ccc;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form p{
+  font-size: 1.4rem;
+  /* margin-bottom: 10px; */ 
+}
+
 h1{
     text-align: center;
 }
@@ -60,14 +73,7 @@ h1{
     background-color: rgb(207, 10, 10);
 } */
 
-/* FORM */
-.form{
-  background-color: #ccc;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+
   .container {
     width: 100%;
   }
