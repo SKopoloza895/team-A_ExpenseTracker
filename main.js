@@ -115,6 +115,7 @@ saveButton.addEventListener("click", () => { // "click" event and on click event
   display(); 
   cancelButton.style.display = "none";
 })
+display();
 
 //Function To Add Expenses
 checkAmountButton.addEventListener("click", () => {
