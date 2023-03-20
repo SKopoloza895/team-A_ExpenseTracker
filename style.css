@@ -26,23 +26,14 @@ body{
   font-size: 2rem;
 }
 
-.profile{
-    display: flex;
-    align-items: center;
-    column-gap: 0.5rem;
-    cursor: pointer;
+/* MAIN */
+.main{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.profile img{
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50%;
-}
-.profile span{
-    font-size: 13px;
-    font-weight: 500;
-}
+
 h1{
     text-align: center;
 }
