@@ -34,6 +34,13 @@ body{
   align-items: center;
 }
 
+.topBar{
+  background: lightskyblue;
+  color: white;
+  padding: 20px;
+  min-width: 300px;
+}
+
 h1{
     text-align: center;
 }
