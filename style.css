@@ -13,21 +13,19 @@ body{
   flex-direction: column;
   /* background: rgb(226, 161, 161); */
 }
-/* header{
-    position: absolute;
-    width: 100%;
-    margin: auto;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background: rgb(28, 188, 159);
-    box-shadow: 0 8px 11px rgba(14 55 54 /15%);
-    padding: 20px 100px;
-    transition: 0.5s;
+
+/* HEADER AND FOOTER */
+.header,.footer{
+  background-color: lightskyblue;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
+.header{
+  font-size: 2rem;
+}
+
 .profile{
     display: flex;
     align-items: center;
