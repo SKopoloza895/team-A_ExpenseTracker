@@ -107,6 +107,23 @@ ul{
   list-style: none;
 }
 
+/* transaction income & expense */
+.transaction{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: white;
+  margin: 5px 0;
+}
+/* transaction income & expense for color */
+.income{
+  background-color: lightskyblue;
+}
+.expense{
+  background-color: #e5415e;
+}
+
   .container {
     width: 100%;
   }
