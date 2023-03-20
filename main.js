@@ -43,6 +43,13 @@ function deleteBtn(i) {
   display();
 }
 
+// function for load data in local storage
+function loadData() {
+  symbol = localStorage.getItem("symbol");
+  currentBalance = Number(localStorage.getItem("balance"));
+  listOfTransactions = JSON.parse(localStorage.getItem("list"));
+
+}
 
 // Function for display (render)
 function display() {
