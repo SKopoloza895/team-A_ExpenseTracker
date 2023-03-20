@@ -90,6 +90,32 @@ function display() {
   keepData();
 }
 
+
+saveButton.addEventListener("click", () => { // "click" event and on click event 
+  if (tnxdescriptionNameHolder.value == "" || (tnxAmountolder.value) <= 0) { // if true with blank then check OR Aamount with 0 
+      alert("Can't be blank!");
+      return;
+  }
+  
+  let transaction = { // use for objects
+      name: tnxdescriptionNameHolder.value,
+      amount: Number(tnxAmountolder.value), // convert it to number
+      type: income.checked? "income" : "expense" // selected 
+  };
+  // console.log(transaction);
+
+  if (editIndex == -1) listOfTransactions.push(transaction);
+
+  else 
+      listOfTransactions[editIndex] = transaction;
+
+  editIndex = -1;    
+  tnxdescriptionNameHolder.value ="";
+  tnxAmountolder.value = "";
+  display(); 
+  cancelButton.style.display = "none";
+})
+
 //Function To Add Expenses
 checkAmountButton.addEventListener("click", () => {
   //empty checks
