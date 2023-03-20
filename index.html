@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team A Expense Tracker</title>
     <link rel="stylesheet" href="style.css">
-    
+
    <!-- Font awesome cdn for libraries -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
@@ -35,25 +35,25 @@
             <div class="form">
                 <p>Add Transaction</p>
                 <div class="form-control">
-                    <label for="description-Name">Description</label>
+                    <label for="description-Name">Description: </label>
                     <input type="text" name="description-Name" id="description-Name" placeholder="e.g my salary">
                 </div>
                 <div class="form-control">
-                    <label for="name">Type</label>
+                    <label for="name">Type: </label>
                     <!-- for radio click income/expense -->
                     <div class="radio">
                         <input type="radio" name="type" id="income" checked>
-                        <label for="raido"> Income</label>
+                        <label for="raido"> Income </label>
                     </div>
                     <div class="radio">
                         <input type="radio" name="type" id="expense">
-                        <label for="raido"> Expense</label>
+                        <label for="raido"> Expense </label>
                     </div>
                     
                 </div>
                 <!-- for amount -->
                 <div class="form-control">
-                    <label for="amount">Amount</label>
+                    <label for="amount">Amount: </label>
                     <input type="number" name="amount" id="amount" placeholder="e.g 100">
                 </div>
                 <!-- for button to submit(save to transaction) -->

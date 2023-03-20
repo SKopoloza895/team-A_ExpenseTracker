@@ -1,58 +1,17 @@
-// its not working this logic
+const currencyHolder = document.getElementById("currency") //currency from html to getElementById
+const balanceHolder = document.getElementById("balance") // balance from html to getElementById
 
-// let userValue = {
-//   checkIncome: 0,
-//   checkExpense: 0,
-//   checkBalance: 0,
-//   transactionslist: [],
-// }
+const tnxdescriptionNameHolder = document.getElementById("description-Name") // description-Name from html to getElementById 
+const tnxAmountolder = document.getElementById("amount") //amount from html to getElementById
 
-// function display() {
-//   let showIncome = document.getElementById('income-value')
-//   showIncome.innerHTML = userValue.checkIncome;
+const income = document.getElementById("income") // income (radio)from html to getElementById
+const expense = document.getElementById("expense") // expense (radio)from html to getElementById
 
-//   let showExpense = document.getElementById('expenditure-value')
-//   showExpense.innerHTML=userValue.checkExpense;
+const saveButton = document.getElementById("save"); //save button from html to getElementById
+const cancelButton = document.getElementById("cancel");
 
-//   let showBalance = document.getElementById('balance-amount')
-//   showBalance.innerHTML=userValue.checkBalance;
+const displayList = document.getElementById("list-of-transactions"); // list-of-transactions from html to getElementById
 
-//   let showTransactions = document.getElementById('list-transactions')
-//   showTransactions.innerHTML ='';
-
-//   for (let i = 0; i < userValue.length; i++) {
-//     let colorStyle = '';
-
-//     // if (userValue.transactionslist[i].type == 'income-value') {
-//     //   colorStyle = 
-//     // }
-
-//     showTransactions.innerHTML += ``
-    
-//   }
-// }
-
-
-
-// let me test with this logic if work then take it
-
-
-
-let totalAmount = document.getElementById("total-amount"); //set budget for input from HTML
-let userAmount = document.getElementById("user-amount"); // input for number(cost/amount) from HTML
-const checkAmountButton = document.getElementById("check-amount"); // button for submit from HTML
-const checkIncomeButton = document.getElementById("check-income"); //income
-const totalAmountButton = document.getElementById("total-amount-button"); // CONST mean cant change from 43 to 54 line
-const productTitle = document.getElementById("product-title");
-const errorMessage = document.getElementById("budget-error");
-const productTitleError = document.getElementById("product-title-error");
-const productCostError = document.getElementById("product-cost-error");
-const amount = document.getElementById("amount");
-const expenditureValue = document.getElementById("expenditure-value"); //expense
-const incomeValue = document.getElementById("income-value"); //income
-const balanceValue = document.getElementById("balance-amount"); //balance
-const list = document.getElementById("list-transactions"); //list show
-let tempAmount = 0;
 
 //Set Balance for budget Part
 totalAmountButton.addEventListener("click", () => {
