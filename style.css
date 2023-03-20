@@ -60,14 +60,14 @@ h1{
     background-color: rgb(207, 10, 10);
 } */
 
-/* css to test */
-
-.wrapper {
-    width: 90%;
-    font-size: 16px;
-    max-width: 43.75em;
-    margin: 1em auto;
-  }
+/* FORM */
+.form{
+  background-color: #ccc;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
   .container {
     width: 100%;
   }
