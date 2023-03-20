@@ -29,6 +29,13 @@ function edit(i) { // i for index
   
 }
 
+// Function for Delete onclick="deleteBtn(${i})" 
+function deleteBtn(i) {
+  listOfTransactions = listOfTransactions.
+  filter((e,index) => i !== index); // [filter((e,index) => mean if return is true] [i !== index mean list otherwise it wont be in list that how filter after deleting]
+  display();
+}
+
 //Set Balance for budget Part
 totalAmountButton.addEventListener("click", () => {
   tempAmount = totalAmount.value;
