@@ -59,7 +59,13 @@ body{
 }
 .form p{
   font-size: 1.4rem;
-  /* margin-bottom: 10px; */ 
+}
+/* LABEL AND INPUT */
+label,input{
+  display: block;
+}
+input{
+  padding: 5px 10px;
 }
 
 h1{
