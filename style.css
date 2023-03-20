@@ -40,6 +40,14 @@ body{
   padding: 20px;
   min-width: 300px;
 }
+.text{
+  color: #eee;
+  font-size: 0.8rem;
+  margin-bottom: 2px;
+}
+.amount_balaceHolder{
+  font-size: 2rem;
+}
 
 h1{
     text-align: center;
