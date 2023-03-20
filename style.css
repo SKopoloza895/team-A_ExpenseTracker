@@ -67,6 +67,16 @@ label,input{
 input{
   padding: 5px 10px;
 }
+/* FORM-CONTROL AND RAIDO */
+.form-control{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.radio{
+  display: flex;
+  align-items: center
+}
 
 h1{
     text-align: center;
